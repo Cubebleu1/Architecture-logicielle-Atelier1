@@ -1,2 +1,2 @@
 # Architecture-logicielle-Atelier1
-Double approche, dynamique et statique, de l'atelier 1
+Double dynamique de l'atelier 1
