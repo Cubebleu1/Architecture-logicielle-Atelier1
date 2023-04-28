@@ -1,0 +1,60 @@
+<!DOCTYPE HTML> 
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cards</title>
+  <link rel="stylesheet" type="text/css" th:href="@{css/semantic.min.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}" />
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>
+	<div class="ui five column grid" id="gridContainer" th:each="card : ${cardList}">
+	    <div class="column">   
+                       <div class="ui special cards">
+                           <div class="card">
+                               <div class="content">
+                                   <div class="right floated meta"></div>
+                                   <img class="ui avatar image" th:src="${card.familyPath}"> 
+                                   
+                                   <h1 th:utext="${card.familyName}">
+                                   
+                                   </h1>
+                               </div>
+                               <div class="image imageCard">
+                                   <div class="blurring dimmable image">
+                                       <div class="ui inverted dimmer">
+                                           <div class="content">
+                                               <div class="center">
+                                                   <div class="ui primary button">Add Friend</div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <img class="ui centered tiny  image" th:src="${card.imgPath}">
+                                   </div>
+                               </div>
+                               <div class="content">
+                                   <span class="right floated">
+                                       <i class="heart outline like icon"></i>
+                                       LIKE 
+                                   </span>
+                                   <i class="comment icon"></i>
+                                   <div th:utext="${card.comments}"></div>
+                               </div>
+                               <div class="extra content">
+                                   <div class="ui large transparent left icon input">
+                                       <i class="heart outline icon"></i>
+                                       <input type="text" placeholder="Add Comment...">
+                                   </div>
+                               </div>
+                               <div class="ui bottom attached button">
+                                   <i class="add icon"></i>
+                                   Button
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+	</div>
+</body>
+
+
+</html>
