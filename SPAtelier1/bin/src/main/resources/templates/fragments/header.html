@@ -7,27 +7,20 @@
 </head>
 <body>
 	<div class="ui pointing menu" th:fragment="header">
-        <a class="item" th:href="@{card}">
+        <a class="item">
             Home
         </a>
         <a class="item">
             Messages
         </a>
-        <a class="item" th:href="@{addCard}">
-            Add Card
-        </a>
-        <a class="item" th:href="@{card}">
+        <a class="item active">
             Friends
         </a>
         <div class="right menu">
             <div class="item">
                 <div class="ui transparent icon input">
-	                <form th:action="@{fetchCard}" method="GET">
-	                    <input type="text" placeholder="Search..." name="name">
-	                     <button type="submit">
-	                    	<i class="search link icon"></i>
-	                    </button>
-	                </form>
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
                 </div>
             </div>
         </div>
